@@ -13,6 +13,28 @@
 
         footer{
             background-color: #f2f2f2;
+            position: fixed;
+            bottom: 0px;
+            display: flex;
+            
+        }
+
+        #google_logo{
+            margin: auto;
+        }
+
+        main{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #footnote{
+            display: flex;
+        }
+
+        #search_buttons{
+            display: flex;
         }
 
     </style>
@@ -32,12 +54,14 @@
 
 
 <main>
-    <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
+    <img id="google_logo" src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Logo">
     <form>
         
     </form>
-    <button>Google Search</button>
-    <button>I'm Feeling Lucky</button>
+    <div id="search_buttons">
+        <button>Google Search</button>
+        <button>I'm Feeling Lucky</button>
+    </div>
     <div id="footnote">
         <img src="https://www.google.com/images/hpp/icon-privacy-shield-42px.png" alt="">
         <p>Learn how Google keeps your information secure</p>
