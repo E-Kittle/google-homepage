@@ -10,34 +10,37 @@
             height: 90%;
         }
 
+        a{    
+            text-decoration: none;
+        }
+
+        a:hover{
+            text-decoration: underline;
+        }
+
         body{
             font-size: 14px;
             font-family: arial, sans-serif;
         }
-        .gb_Xe {
-            width: 2em;
-            height: 2em;
-        }
-
-        footer{
-            background-color: #f2f2f2;
-            position: fixed;
-            bottom: 0px;
-            display: flex;
-            width: 100%;
-            align-items: center;
-            height: 3em;
-            justify-content: space-between;
-        }
 
         nav{
-            height: 5em;
+            height: 3em;
             display: flex;
             justify-content: space-between;
+            align-items: center;
+        }
+
+        nav a{
+            /* font-size: small; */
+            color: black;
+        }
+
+        nav a:hover{
+            text-decoration: underline;
         }
 
         #nav_left{
-            width: 20em;
+            width: 8em;
             display: flex;
             justify-content:  space-around;
         }
@@ -46,11 +49,37 @@
             width: 20em;
             display: flex;
             justify-content:  space-around;
+            align-items: center;
+
+        }
+
+        .gb_Xe {
+            width: 1.5em;
+            height: 1.5em;
         }
 
         #sign_in_button{
-            background-color: #2b7de9;
+            background-color: #1a73e8;
             color: white;
+            height: 3em;
+            width: 8em;
+            border-style: none;
+            border-radius: 4px;
+        }
+
+        #sign_in_button:hover {
+	background: #2b7de9;
+	-moz-box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+	box-shadow: 0 1px 2px 0 rgba(66,133,244,0.3),0 1px 3px 1px rgba(66,133,244,0.15);
+}
+
+        #sign_in_button a{
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+          	font-family: Google Sans,Roboto,RobotoDraft,Helvetica,Arial,sans-serif;
+        	letter-spacing: .25px;
         }
 
 
@@ -64,45 +93,111 @@
         }
 
         #google_logo{
-            margin: 2%;
+            margin: 1%;
         }
 
         #search_input{
-            width: 50em;;
+            width: 50em;
+            height: 3em;
+            border-radius: 50px;
+            border-style: solid;
+            border-color: #dfe1ef;
+            background: white;
+            background-image: url(search.svg);
+            background-repeat: no-repeat;
+            background-position: 10px 10px; 
+            background-size: 1.5em;
+        }
+
+        #search_input:hover{
+
+            box-shadow: -2px 2px 2px 2px rgba(0,0,0,.1);
         }
 
         #search_buttons{
             /* margin: auto; */
             display: flex;
+            margin: 2%;
         }
 
+        .button{
+            background-color: #f8f9fa;
+            height: 36px;
+            margin: 11px 4px;
+            padding: 0 16px;
+            border-style: none;
+        }
+
+        .button:hover {
+	box-shadow: 0 1px 1px rgba(0,0,0,.1);
+	background-color: #f8f9fa;
+	border: 1px solid #dadce0;
+	color: #202124;
+}
+
+        #google_account_link a{
+            text-decoration: none;
+        }
+
+        a:visited{    
+            text-decoration: none;
+        }
         #footnote{
             display: flex;
+            font-size: small;
+        }
+
+        footer{
+            background-color: #f2f2f2;
+            position: fixed;
+            bottom: 0px;
+            display: flex;
+            width: 100%;
+            align-items: center;
+            height: 3.5em;
+            justify-content: space-between;
         }
 
         #center_leaf{
-            /* margin-right: auto;
-            margin-left: auto; */
+            height: 1em;
+            width: 1em;
+            margin: auto;
         }
 
         #start_left{
-            width: 20em;
+            width: 22em;
+            margin: 2em;
             display: flex;
-            justify-content:  space-around;
+            justify-content:  space-between;
 
         }
 
         #end_right{
-            width: 20em;
+            width: 16em;
             display: flex;
             justify-content:  space-around;
+            margin: 2em;
+            margin-left: 8em;
+        }
+
+        footer a{
+            color: #70757a;
+            text-decoration: none;
+        }
+
+        footer a:hover{
+            text-decoration: underline;
+        }
+
+        #footer_center{
+            display: flex;
+            justify-content: space-around;
         }
 
     </style>
  </head>
 
 <body>
-
 
 <nav>
     <div id="nav_left">
@@ -124,13 +219,13 @@
         <label><input type="text" id="search_input"></label>
     </form>
     <div id="search_buttons">
-        <button>Google Search</button>
-        <button>I'm Feeling Lucky</button>
+        <button class="button">Google Search</button>
+        <button class="button">I'm Feeling Lucky</button>
     </div>
     <div id="footnote">
         <img src="https://www.google.com/images/hpp/icon-privacy-shield-42px.png" alt="">
-        <p>Learn how Google keeps your information secure</p>
-        <a href="https://myaccount.google.com/intro/saferinternetday?utm_source=google_search&utm_campaign=safer_internet_day"> Visit the Google Account</a>
+        <p>Learn how Google keeps your information secure
+        <a id="google_account_link" href="https://myaccount.google.com/intro/saferinternetday?utm_source=google_search&utm_campaign=safer_internet_day"> Visit the Google Account</a></p>
     </div>
 </main>
 
@@ -140,8 +235,8 @@
     <a href="https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=webhp&cd=&cad=rja&uact=8&ved=0ahUKEwiYmdT91-fuAhVuxFkKHTdcDLEQktQCCBE&url=https%3A%2F%2Fwww.google.com%2Fservices%2F%3Fsubid%3Dww-ww-et-g-awa-a-g_hpbfoot1_1!o2%26utm_source%3Dgoogle.com%26utm_medium%3Dreferral%26utm_campaign%3Dgoogle_hpbfooter%26fg%3D1&usg=AOvVaw2SJ4zwRVXKyZr53qG9dm4K">Business</a>
     <a href="https://www.google.com/search/howsearchworks/?fg=1">How Search Works</a>
     </div>
-    <div id="center_leaf">
-                <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" alt="leaf">
+    <div id="footer_center">
+                <img id="center_leaf" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAYCAMAAAAiV0Z6AAAAPFBMVEVLoEN0wU6CzFKCzFKCzFKCzFKCzFJSo0MSczNDmkCCzFJPoUMTczNdr0gmgziCzFITczMTczMTczMTczPh00jOAAAAFHRSTlPF/+bIsms8Ad///hX+//5/tXw7aMEAx10AAACaSURBVHgBbc4HDoRQCATQ33tbvf9dF9QxaCT9UQaltLHOh/golXKhMs5Xqa0xU1lyoa2fXFyQOsDG38qsLy4TaV+sFislovyhPzLJJrBu6eQOtpW0LjbJkzTuTDLRVNKa3uxJI+VdiRqXSeu6GW+Qxi29eLIi8H7EsYrT42BD+mQtNO5JMjRuC4lSY8V4hsLX0egGijvUSEP9AbylEsOkeCgWAAAAAElFTkSuQmCC" alt="leaf">
         <a href="https://sustainability.google/commitments/?utm_source=googlehpfooter&utm_medium=housepromos&utm_campaign=bottom-footer&utm_content=">Carbon neutral since 2007</a>
     </div>
     <div id="end_right">
